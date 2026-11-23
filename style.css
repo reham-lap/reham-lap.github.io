@@ -10,9 +10,9 @@ body {
 }
 
 .port {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 24px 18px 48px;
+  width: 100%;
+  margin: 0;
+  padding: 24px 20px 48px;
 }
 
 /* Hero */
@@ -134,7 +134,7 @@ body {
 /* Feature */
 .feature-sub { font-size: 13px; color: #C89A82; margin: 0 0 6px; }
 .feature-title { font-size: 19px; font-weight: 700; color: #FAEADC; margin: 0 0 10px; }
-.feature-body { font-size: 14.5px; line-height: 1.65; color: rgb(250 234 220 / 0.74); margin: 0 0 12px; }
+.feature-body { font-size: 14.5px; line-height: 1.65; color: rgb(250 234 220 / 0.74); margin: 0 0 12px; max-width: 900px; }
 
 /* Bullets */
 .bullets { margin: 0; padding-left: 20px; color: rgb(250 234 220 / 0.74); font-size: 14.5px; line-height: 1.65; }
@@ -196,6 +196,41 @@ body {
 }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1); }
 .reveal.in { opacity: 1; transform: none; }
+
+/* Desktop: fill the screen width, content spread in two columns */
+@media (min-width: 1024px) {
+  .port { padding: 40px 64px 72px; }
+  .port-hero { grid-template-columns: 1.3fr 1fr; gap: 48px; padding: 48px 44px; margin-bottom: 56px; }
+  .port-photo { max-width: 420px; justify-self: end; }
+  .port-name { font-size: 52px; }
+  .port-tagline { font-size: 16px; max-width: 640px; }
+  .group { margin-bottom: 56px; }
+  .group-heading { font-size: 28px; }
+  .rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+  .row:first-child { border-top: 1px solid rgb(250 234 220 / 0.12); }
+  .row:nth-child(-n+2) { border-top: none; }
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+  .fact:first-child { border-top: 1px solid rgb(250 234 220 / 0.12); }
+  .fact:nth-child(-n+2) { border-top: none; }
+  .bullets { column-count: 2; column-gap: 48px; }
+  .bullets li { break-inside: avoid; }
+  .feature-title { font-size: 22px; }
+  .feature-body { max-width: 1100px; }
+  .closing { margin-top: 64px; }
+}
+
+/* Large desktop: a bit more air, still full width */
+@media (min-width: 1600px) {
+  .port { padding: 56px 96px 88px; }
+}
 
 @media (max-width: 640px) {
   .port { padding: 16px 14px 40px; }
