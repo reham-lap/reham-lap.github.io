@@ -256,3 +256,8 @@ body {
   .port-caret { display: none; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ThreeUI hero background */
+.port-hero{position:relative;overflow:hidden}
+#threeui-hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.port-hero>*:not(#threeui-hero-bg){position:relative;z-index:1}

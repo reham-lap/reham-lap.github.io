@@ -18,11 +18,13 @@
 <link rel="icon" type="image/png" href="favicon.png" />
 <link rel="apple-touch-icon" href="favicon.png" />
 <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="threeui/tui.css" />
 </head>
 <body>
 <div class="port">
 
   <header class="port-hero">
+    <div id="threeui-hero-bg" aria-hidden="true"></div>
     <div class="port-hero-text">
       <div class="port-eyebrow"><span id="eyebrow"></span><span class="port-caret" aria-hidden="true"></span></div>
       <h1 class="port-name">Reham Ashraf</h1>
@@ -206,5 +208,6 @@
   targets.forEach(function (t) { observer.observe(t); });
 })();
 </script>
+<script src="threeui/hero.js"></script>
 </body>
 </html>
